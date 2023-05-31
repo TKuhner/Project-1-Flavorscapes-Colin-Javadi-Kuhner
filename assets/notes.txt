@@ -1,0 +1,60 @@
+Project 1 Notes = Flavorscapes
+
+Online Regional Cookbook
+Select a region and get a list of recipes from that region
+Select a recipe and get the ingredients and instructions
+select meal plan and get a list of recipes for that meal plan
+meal plan can be for a day, week, month, etc
+during meal plan selection, you can select a country or region and get recipes from that region/country
+
+
+frontend
+main landing page - can go to "meal plan creator" or to "my meal plan"
+landing page lists various different recipes to check out
+option to add recipe to meal plan later
+meal plan creation page - my meal plan stored locally
+my meal plan can access recipe pages
+recipe page
+traverse meal plan
+save the users plan into local storage
+provide selection of recipes to choose for the day, or force select random so user doesn't have to choose
+
+
+
+backend
+pull regions
+search recipes by region/recipe/ingredients/categories
+provide recipes to user
+receive user selection
+add meal to plan
+get meal plan start date
+build out meal plan calendar
+save plan locally
+pull plan from local storage
+display plan to user
+
+
+to do list
+frame out main page
+frame out meal plan page
+frame out recipe page
+frame out calendar page
+add styling
+
+general functionality
+handle api calls
+element creations
+user will be handled locally as we have not reached database functionality yet in the program
+calendar creation
+
+
+search categories:  http://www.themealdb.com/api/json/v1/1/list.php?c=list
+search regions:     http://www.themealdb.com/api/json/v1/1/list.php?a=list
+search ingredients: http://www.themealdb.com/api/json/v1/1/list.php?i=list
+
+search name:        http://www.themealdb.com/api/json/v1/1/search.php?s=name
+
+filter category:    http://www.themealdb.com/api/json/v1/1/filter.php?c=categoryname        "strCategory"
+filter area name:   http://www.themealdb.com/api/json/v1/1/filter.php?a=areaname            "strArea"
+filter ingredients: http://www.themealdb.com/api/json/v1/1/filter.php?i=ingredientname      "strIngredient"
+filter ingredient:  http://www.themealdb.com/api/json/v1/1/filter.php?i=chicken%20breast    
