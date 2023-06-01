@@ -11,6 +11,7 @@
 </head>
 
 <body>
+    <!-- Header -->
     <header>
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
@@ -34,6 +35,8 @@
             </div>
         </nav>
     </header>
+
+    <!-- Regions of the Day Section -->
     <section class="hero is-info">
         <div class="hero-body">
             <div class="container has-text-centered">
@@ -120,47 +123,53 @@
             </div>
         </div>
     </div>
+
+    <!-- Featured Recipes Section -->
     <section class="hero is-success">
         <div class="hero-body">
             <div class="container has-text-centered">
                 <p class="title">
-                    Recipes of The Day
+                    Featured Recipes
                 </p>
             </div>
         </div>
     </section>
+
+    <!-- featured recipe cards -->
     <div class="columns is-multiline">
         <div class="column is-one-third has-text-centered">
+            <!-- card 1 -->
             <div class="column is-6">
                 <div class="card">
                     <div class="card-image">
                         <figure class="image is-48by48">
-                            <img src="./assets/images/5-2-burger-png.png" alt="Placeholder image">
+                            <img id="featRecImg0" src="./assets/images/5-2-burger-png.png" alt="Placeholder image">
                         </figure>
                     </div>
+                     
                     <div class="card-content">
                         <div class="media">
                             <div class="media-center">
                             </div>
                             <div class="media-content">
-                                <p class="title is-4">Recipe Name</p>
+                                <p id="featRecName0" class="title is-4">Recipe Name</p>
                             </div>
                         </div>
 
                         <div class="content">
-                            <button class="button is-dark viewRecipe">View Recipes</button>
-                            <button class="button is-dark addRecipeCart">Add to Cart</button>
+                            <butto id="viewRecipeBtn0" class="button is-dark viewRecipe">View Recipe</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="column is-one-third has-text-centered">
+            <!-- card 2 -->
             <div class="column is-6">
                 <div class="card">
                     <div class="card-image">
                         <figure class="image is-48by48">
-                            <img src="./assets/images/5-2-burger-png.png" alt="Placeholder image">
+                            <img id="featRecImg1" src="./assets/images/5-2-burger-png.png" alt="Placeholder image">
                         </figure>
                     </div>
                     <div class="card-content">
@@ -168,24 +177,25 @@
                             <div class="media-center">
                             </div>
                             <div class="media-content">
-                                <p class="title is-4">Recipe Name</p>
+                                <p id="featRecName1" class="title is-4">Recipe Name</p>
                             </div>
                         </div>
 
                         <div class="content">
-                            <button class="button is-dark viewRecipe">View Recipes</button>
-                            <button class="button is-dark addRecipeCart">Add to Cart</button>
+                            <button id="viewRecipeBtn1" class="button is-dark viewRecipe">View Recipe</button>
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="column is-one-third has-text-centered">
+            <!-- card 3 -->
             <div class="column is-6">
                 <div class="card">
                     <div class="card-image">
                         <figure class="image is-48by48">
-                            <img src="./assets/images/5-2-burger-png.png" alt="Placeholder image">
+                            <img id="featRecImg2" src="./assets/images/5-2-burger-png.png" alt="Placeholder image">
                         </figure>
                     </div>
                     <div class="card-content">
@@ -193,13 +203,13 @@
                             <div class="media-center">
                             </div>
                             <div class="media-content">
-                                <p class="title is-4">Recipe Name</p>
+                                <p id="featRecName2" class="title is-4">Recipe Name</p>
                             </div>
                         </div>
 
                         <div class="content">
-                            <button class="button is-dark viewRecipe">View Recipes</button>
-                            <button class="button is-dark addRecipeCart">Add to Cart</button>
+                            <button id="viewRecipeBtn2" class="button is-dark viewRecipe">View Recipe</button>
+                        
                         </div>
                     </div>
                 </div>
@@ -220,6 +230,8 @@
             <a href=""></a>
         </div>
     </div>
+
+    <!-- About Us Blurb -->
     <section class="section is-medium has-text-centered has-background-light">
         <h1 class="title">About Us</h1>
         <h2 class="subtitle">
@@ -239,17 +251,20 @@
         </div>
     </footer>
 
-    <!-- modal -->
-    <div class="modal">
-        <div class="modal-background"></div>
-        <div class="modal-content has-background-white py-5 px-5 has-text-centered">
-            <h3 class="title mb-6">RECIPE STUFF</h3>
-            <p class="recipeIngred">ingredients</p>
-            <p class="recipeInstruct">instructions</p>
-            <button class="button is-dark addRecipeCart">Add to Cart</button>
-
-        </div>
+ <!-- modal -->
+<div class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-content has-background-white py-5 px-5 has-text-centered">
+      <h3 id="modalRecName" class="title mb-6 recName">RECIPE STUFF</h3>
+      <img class="recipeImage" src="" alt="">
+      <h4>Ingredients:</h4>
+      <p class="recipeIngred recIng">ingredients</p>
+      <h4>Instructions:</h4>
+      <p class="recipeInstruct recInst">instructions</p>
+      <button class="button is-dark addRecipeCart">Add to Cart</button>
     </div>
+  </div>
+  
 
     <script src="./assets/js/script.js"></script>
 </body>
