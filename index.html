@@ -27,9 +27,8 @@
             </div>
             <div id="navbarBasicExample" class="navbar-menu">
                 <div class="navbar-end">
-                    <button class="button is-dark">Recipes</button>
-                    <button class="button is-dark">Calendar</button>
-                    <button class="button is-dark">Meal Builder</button>
+                    <button class="button is-dark"><a href="calendar.html">Calendar</a></button>
+                    <button class="button is-dark"><a href="meal-plan.html">Meal Builder</a></button>
                     <button class="button is-dark">Cart</button>
                 </div>
             </div>
@@ -63,7 +62,7 @@
                         </div>
 
                         <div class="content">
-                            <button class="button is-dark">View Recipes</button>
+                            <button class="button is-dark viewRecipe">View Recipes</button>
 
                         </div>
                     </div>
@@ -88,7 +87,7 @@
                         </div>
 
                         <div class="content">
-                            <button class="button is-dark">View Recipes</button>
+                            <button class="button is-dark viewRecipe">View Recipes</button>
 
                         </div>
                     </div>
@@ -113,7 +112,7 @@
                         </div>
 
                         <div class="content">
-                            <button class="button is-dark">View Recipes</button>
+                            <button class="button is-dark viewRecipe">View Recipes</button>
 
                         </div>
                     </div>
@@ -149,8 +148,8 @@
                         </div>
 
                         <div class="content">
-                            <button class="button is-dark">View Recipes</button>
-                            <button class="button is-dark">Add to Cart</button>
+                            <button class="button is-dark viewRecipe">View Recipes</button>
+                            <button class="button is-dark addRecipeCart">Add to Cart</button>
                         </div>
                     </div>
                 </div>
@@ -174,8 +173,8 @@
                         </div>
 
                         <div class="content">
-                            <button class="button is-dark">View Recipe</button>
-                            <button class="button is-dark">Add to Cart</button>
+                            <button class="button is-dark viewRecipe">View Recipes</button>
+                            <button class="button is-dark addRecipeCart">Add to Cart</button>
                         </div>
                     </div>
                 </div>
@@ -199,8 +198,8 @@
                         </div>
 
                         <div class="content">
-                            <button class="button is-dark">View Recipe</button>
-                            <button class="button is-dark">Add to Cart</button>
+                            <button class="button is-dark viewRecipe">View Recipes</button>
+                            <button class="button is-dark addRecipeCart">Add to Cart</button>
                         </div>
                     </div>
                 </div>
@@ -239,7 +238,19 @@
             <button class="button is-primary">Tik-Tok</button>
         </div>
     </footer>
-    
+
+    <!-- modal -->
+    <div class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-content has-background-white py-5 px-5 has-text-centered">
+            <h3 class="title mb-6">RECIPE STUFF</h3>
+            <p class="recipeIngred">ingredients</p>
+            <p class="recipeInstruct">instructions</p>
+            <button class="button is-dark addRecipeCart">Add to Cart</button>
+
+        </div>
+    </div>
+
     <script src="./assets/js/script.js"></script>
 </body>
 
