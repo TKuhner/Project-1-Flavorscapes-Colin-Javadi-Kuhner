@@ -1,0 +1,9 @@
+Cart - each individual meal should have a delete button if they don't want it anymore.
+
+Should have a checkout button.
+<!-- Hover added -->
+<div class="list-group">
+    <a href="#" class="list-group-item list-group-item-action active">Active item</a>
+    <a href="#" class="list-group-item list-group-item-action">Item</a>
+    <a href="#" class="list-group-item list-group-item-action disabled">Disabled item</a>
+</div>
