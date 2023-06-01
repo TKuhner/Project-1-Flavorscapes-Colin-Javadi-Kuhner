@@ -1,4 +1,3 @@
-
 const searchAllCats = "https://www.themealdb.com/api/json/v1/1/list.php?c=list";
 const searchAllRegions = "https://www.themealdb.com/api/json/v1/1/list.php?a=list";
 const searchAllIngredients = "https://www.themealdb.com/api/json/v1/1/list.php?i=list";
@@ -13,14 +12,14 @@ const filterIngredient = "https://www.themealdb.com/api/json/v1/1/filter.php?i="
 function getAllCategories() {
     fetch(searchAllCats, {
         method: 'GET',
-        
+
     })
         .then(function (response) {
             return response.json();
         })
         .then(function (data) {
-    
-    
+
+
             for (let index = 0; index < data.meals.length; index++) {
                 console.log(data.meals[index]);
             }
@@ -31,14 +30,14 @@ function getAllCategories() {
 function getAllRegions() {
     fetch(searchAllRegions, {
         method: 'GET',
-        
+
     })
         .then(function (response) {
             return response.json();
         })
         .then(function (data) {
-    
-    
+
+
             for (let index = 0; index < data.meals.length; index++) {
                 console.log(data.meals[index]);
             }
@@ -49,22 +48,22 @@ function getAllRegions() {
 function getAllIngredients() {
     fetch(searchAllIngredients, {
         method: 'GET',
-        
+
     })
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (data) {
-    
-    
-        for (let index = 0; index < data.meals.length; index++) {
-            console.log(data.meals[index]);
-        }
-    });
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+
+
+            for (let index = 0; index < data.meals.length; index++) {
+                console.log(data.meals[index]);
+            }
+        });
 }
 
 // this will pass the user selected category to the function, concat the string and pass it to the API
-function getCustomerCategory(userCat){
+function getCustomerCategory(userCat) {
     let filteredCategory = filterCategory + userCat;
     console.log(filteredCategory);
     fetch(filteredCategory, {
@@ -74,8 +73,8 @@ function getCustomerCategory(userCat){
             return response.json();
         })
         .then(function (data) {
-    
-    
+
+
             for (let index = 0; index < data.meals.length; index++) {
                 console.log(data.meals[index]);
             }
@@ -83,7 +82,7 @@ function getCustomerCategory(userCat){
 }
 
 // this will pass the user selected region to the function, concat the string and pass it to the API
-function getCustomerRegion(userReg){
+function getCustomerRegion(userReg) {
     let filteredRegion = filterRegion + userReg;
     console.log(filteredRegion);
     fetch(filteredRegion, {
@@ -93,8 +92,8 @@ function getCustomerRegion(userReg){
             return response.json();
         })
         .then(function (data) {
-    
-    
+
+
             for (let index = 0; index < data.meals.length; index++) {
                 console.log(data.meals[index]);
             }
@@ -102,7 +101,7 @@ function getCustomerRegion(userReg){
 }
 
 // this will pass the user selected ingredient to the function, concat the string and pass it to the API
-function getCustomerIngredient(userIng){
+function getCustomerIngredient(userIng) {
     let filteredIngredient = filterIngredient + userIng;
     console.log(filteredIngredient);
     fetch(filteredIngredient, {
@@ -112,8 +111,8 @@ function getCustomerIngredient(userIng){
             return response.json();
         })
         .then(function (data) {
-    
-    
+
+
             for (let index = 0; index < data.meals.length; index++) {
                 console.log(data.meals[index]);
             }
@@ -127,51 +126,48 @@ function getCustomerIngredient(userIng){
 
 
 
-    // REGIONS
-    //     'American',
-    //     'British',
-    //     'Canadian',
-    //     'Chinese',
-    //     'Croatian',
-    //     'Dutch',
-    //     'Egyptian',
-    //     'Filipino',
-    //     'French',
-    //     'Greek',
-    //     'Indian',
-    //     'Irish',
-    //     'Italian',
-    //     'Jamaican',
-    //     'Japanese',
-    //     'Kenyan',
-    //     'Malaysian',
-    //     'Mexican',
-    //     'Moroccan',
-    //     'Polish',
-    //     'Portugues',
-    //     'Russian',
-    //     'Spanish',
-    //     'Thai',
-    //     'Tunisian',
-    //     'Turkish',
-    //     'Unknown',
-    //     'Vietnames']
-    
-    // CATEGORIES 
-    //     'Beef', 
-    //     'Breakfast', 
-    //     'Chicken',
-    //     'Dessert',
-    //     'Goat', 
-    //     'Lamb', 
-    //     'Miscellaneous', 
-    //     'Pasta', 
-    //     'Pork', 
-    //     'Seafood', 
-    //     'Side', 
-    //     'Starter', 
-    //     'Vegan', 
-    //     'Vegetarian'
-  
-    
-    
+// REGIONS
+//     'American',
+//     'British',
+//     'Canadian',
+//     'Chinese',
+//     'Croatian',
+//     'Dutch',
+//     'Egyptian',
+//     'Filipino',
+//     'French',
+//     'Greek',
+//     'Indian',
+//     'Irish',
+//     'Italian',
+//     'Jamaican',
+//     'Japanese',
+//     'Kenyan',
+//     'Malaysian',
+//     'Mexican',
+//     'Moroccan',
+//     'Polish',
+//     'Portugues',
+//     'Russian',
+//     'Spanish',
+//     'Thai',
+//     'Tunisian',
+//     'Turkish',
+//     'Unknown',
+//     'Vietnames']
+
+// CATEGORIES 
+//     'Beef', 
+//     'Breakfast', 
+//     'Chicken',
+//     'Dessert',
+//     'Goat', 
+//     'Lamb', 
+//     'Miscellaneous', 
+//     'Pasta', 
+//     'Pork', 
+//     'Seafood', 
+//     'Side', 
+//     'Starter', 
+//     'Vegan', 
+//     'Vegetarian'
