@@ -38,20 +38,49 @@ Should have a checkout button. -->
  -->
 
 
+ <!-- Cart -->
+
       <!-- Create a button to trigger the modal -->
 <button class="button is-primary" id="open-modal">Open Cart</button>
 <!-- Create the modal structure -->
 <div class="modal" id="cart-modal">
     <div class="modal-background"></div>
     <div class="modal-content">
-
+      <div class="modal-content">
+        <h2>Your Shopping Cart</h2>
+        <ul>
+          <li>Product 1</li>
+          <li>Product 2</li>
+          <li>Product 3</li>
+        </ul>
+        <button class="button is-primary">Checkout</button>
+      </div>
     <!-- Modal content goes here -->
 </div>
 <button class="modal-close is-large" aria-label="close"></button>
 </div>
 
 
+<!-- JavaScript -->
+<script>
+  // Get references to the modal and button
+  const modal = document.getElementById('cart-modal');
+  const button = document.getElementById('open-modal');
 
+  // Function to open the modal
+  function openModal() {
+    modal.classList.add('is-active');
+  }
+
+  // Function to close the modal
+  function closeModal() {
+    modal.classList.remove('is-active');
+  }
+
+  // Add event listeners to the button and modal close button
+  button.addEventListener('click', openModal);
+  modal.querySelector('.modal-close').addEventListener('click', closeModal);
+</script>
 
 
 
