@@ -1,0 +1,32 @@
+#container {
+    width: 1000px;
+    height: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+}
+
+#sidebar {
+    width: 20%;
+    height: 100%;
+    margin: 5%;
+}
+
+#recipeOptions {
+    width: 70%;
+    height: auto;
+    margin: 1%;
+}
+
+.column {
+    justify-content: center;
+    align-items: center;
+    padding-left: 1%;
+    display: flex;
+}
+
+.button {
+    margin: 8px;
+}
