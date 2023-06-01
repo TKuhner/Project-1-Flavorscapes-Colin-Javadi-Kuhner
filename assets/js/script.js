@@ -8,6 +8,8 @@ const filterCategory = "https://www.themealdb.com/api/json/v1/1/filter.php?c=";
 const filterRegion = "https://www.themealdb.com/api/json/v1/1/filter.php?a=";
 const filterIngredient = "https://www.themealdb.com/api/json/v1/1/filter.php?i=";
 
+const randomRecipe = 'https://www.themealdb.com/api/json/v1/1/random.php';
+
 // this will pull all categories from the API = 14 total currently
 function getAllCategories() {
     fetch(searchAllCats, {
@@ -171,3 +173,35 @@ function getCustomerIngredient(userIng) {
 //     'Starter', 
 //     'Vegan', 
 //     'Vegetarian'
+
+const viewRecipeBtn = document.querySelectorAll('.viewRecipe');
+const modal = document.querySelector('.modal');
+const modalBG = document.querySelector('.modal-background');
+const submitCartBtn = document.querySelector('.submitCartBtn');
+
+
+
+
+
+viewRecipeBtn.forEach(function(button){
+    button.addEventListener('click', openModal);
+})
+function openModal(){
+    modal.classList.add('is-active');
+    
+}
+
+modalBG.addEventListener('click', () => modal.classList.remove('is-active'));
+
+addCartBtn.forEach(function(button){
+    button.addEventListener('click', addToCart);
+})
+
+function addToCart(){
+    // get the recipe name
+    // store the recipe name in local storage for cart
+}
+
+
+
+

@@ -108,6 +108,17 @@ function initButtons() {
 }
 
 
+function openCalendarModal(date){
+    clicked = date;
+
+    const eventForDay = events.find(e => e.date === clicked);
+
+    if (eventForDay) {
+        
+    } else {
+    }
+}
+
 initButtons();
 load();
 
