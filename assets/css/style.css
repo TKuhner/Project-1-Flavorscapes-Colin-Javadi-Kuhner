@@ -19,3 +19,14 @@
     height: auto;
     margin: 1%;
 }
+
+.column {
+    justify-content: center;
+    align-items: center;
+    padding-left: 1%;
+    display: flex;
+}
+
+.button {
+    margin: 8px;
+}
