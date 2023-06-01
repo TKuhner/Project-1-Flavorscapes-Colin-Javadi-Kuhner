@@ -47,7 +47,7 @@ Should have a checkout button. -->
     <div class="modal-background"></div>
     <div class="modal-card">
       <header class="modal-card-head">
-        <p class="modal-card-title"> Your Shopping Cart </p> 
+        <p class="modal-card-title is-centered"> Your Shopping Cart </p> 
 
         </header>
     </div>
@@ -60,9 +60,9 @@ Should have a checkout button. -->
         <!-- functionality to save to local storage  -->
 
         <ul>
-          <li>Product 1</li>
-          <li>Product 2</li>
-          <li>Product 3</li>
+          <li class="cart-item"> Placeholder Product 1</li>
+          <li class="cart-item"> Placeholder Product 2</li>
+          <li class="cart-item"> Placeholder Product 3</li>
         </ul>
 
         <button class="button is-primary">Checkout</button>
@@ -107,11 +107,30 @@ var thumbNail = document.getElementbyId('thumbnail')
 // save items to local storage
 const saveCart = localStorage.setItem("Recipe",thumbNail) // saves recipe name and thumbNail variable to local storage 
 
+// populate cart function, and then attack to the button on click
+function populatecart () {
+
+// need logic to save reciple into a variable and then display that in the cart
+
+  // Get the recipe details
+  var cartItem = document.getElementsByClassName('cart-item')[0].innerText;
+  var thumbnail = document.getElementById('thumbnail').src;
 
 
+ // Save the recipe details to local storage
+ localStorage.setItem("cartItem", cartItem);
+  localStorage.setItem("thumbnail", thumbnail);
 
+  var button = document.getElementById('shopping-cart');
+button.addEventListener('click', populateCart);
 
+}
 
+button.addEventListener('click',populatecart);
+
+//TODO:  set boolean- added to cart?
+// ability to delete / remove item from cart 
+// saves to local storage 
 
 </script>
 
