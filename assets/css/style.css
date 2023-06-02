@@ -1,32 +1,37 @@
 #container {
-    width: 1000px;
-    height: 1000px;
+    width: 100%;
+    height: 100000000000000px;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: row;
-
-}
-
-#sidebar {
+    justify-content: center;
+    align-items: flex-start; /* Adjust alignment as needed */
+  }
+  
+  #sidebar {
     width: 20%;
     height: 100%;
     margin: 5%;
-}
-
-#recipeOptions {
+    overflow-y: auto; /* Add scrollbar for vertical overflow */
+  }
+  
+  #recipeOptions {
     width: 70%;
     height: auto;
     margin: 1%;
-}
-
-.column {
+    display: flex;
+    flex-wrap: wrap; /* Allow multiple recipe cards to wrap within the container */
+    justify-content: flex-start; /* Adjust alignment as needed */
+    align-items: flex-start; /* Adjust alignment as needed */
+  }
+  
+  .column {
     justify-content: center;
     align-items: center;
     padding-left: 1%;
     display: flex;
-}
-
-.button {
+  }
+  
+  .button {
     margin: 8px;
-}
+  }
+  
