@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+<script defer src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"></script>
+
+
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Flavorscapes</title>
 </head>
@@ -44,63 +47,31 @@
     </section>
     <section id="container">
         <aside id="sidebar">
-                <div class="column">
-                    <div class="dropdown is-active">
-                        <div class="dropdown-trigger">
-                            <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-                                <span>Dropdown button</span>
-                                <span class="icon is-small">
-                                    <i class="fas fa-angle-down" aria-hidden="true"></i>
-                                </span>
-                            </button>
-                        </div>
-                        <div class="dropdown-menu" id="dropdown-menu" role="menu">
-                            <div class="dropdown-content">
-                                <a href="#" class="dropdown-item">
-                                    Dropdown item
-                                </a>
-                                <a class="dropdown-item">
-                                    Other dropdown item
-                                </a>
-                                <a href="#" class="dropdown-item is-active">
-                                    Active dropdown item
-                                </a>
-                                <a href="#" class="dropdown-item">
-                                    Other dropdown item
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <div class="dropdown is-active">
-                        <div class="dropdown-trigger">
-                            <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-                                <span>Dropdown button</span>
-                                <span class="icon is-small">
-                                    <i class="fas fa-angle-down" aria-hidden="true"></i>
-                                </span>
-                            </button>
-                        </div>
-                        <div class="dropdown-menu" id="dropdown-menu" role="menu">
-                            <div class="dropdown-content">
-                                <a href="#" class="dropdown-item">
-                                    Dropdown item
-                                </a>
-                                <a class="dropdown-item">
-                                    Other dropdown item
-                                </a>
-                                <a href="#" class="dropdown-item is-active">
-                                    Active dropdown item
-                                </a>
-                                <a href="#" class="dropdown-item">
-                                    Other dropdown item
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+            <div class="dropdown">
+                <div class="dropdown-trigger">
+                  <button id="dropDown1" class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                    <span>Search</span>
+                    <span class="icon is-small">
+                      <i class="fas fa-angle-down" aria-hidden="true"></i>
+                    </span>
+                  </button>
                 </div>
+                <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                  <div class="dropdown-content">
+                    <a id="getCatList" href="#" class="dropdown-item">
+                      Categories
+                    </a>
+                    <a id="getRegList"class="dropdown-item">
+                      Regions
+                    </a>
+                    <a id="getIngList" href="#" class="dropdown-item">
+                      Ingredients
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div id="dropdown-placeholder"></div>
+
         </aside>
         <main id="recipeOptions">
                 <div class="column">
@@ -122,54 +93,32 @@
 
                                 <div class="content">
                                     <button class="button is-dark viewRecipe">View Recipe</button>
-                                    <button class="button is-dark">Add to Cart</button>
+                                    
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="column">
-                    <div class="column is-6">
-                        <div class="card">
-                            <div class="card-image">
-                                <figure class="image is-48by48">
-                                    <img src="./assets/images/5-2-burger-png.png" alt="Placeholder image">
-                                </figure>
-                            </div>
-                            <div class="card-content">
-                                <div class="media">
-                                    <div class="media-center">
-                                    </div>
-                                    <div class="media-content">
-                                        <p class="title is-4">Recipe Name</p>
-                                    </div>
-                                </div>
-
-                                <div class="content">
-                                    <button class="button is-dark viewRecipe">View Recipe</button>
-                                    <button class="button is-dark">Add to Cart</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+               
         </main>
     </section>
 
 
-<!-- modal -->
-<div class="modal">
+ <!-- modal -->
+ <div class="modal">
     <div class="modal-background"></div>
     <div class="modal-content has-background-white py-5 px-5 has-text-centered">
-        <h3 class="title mb-6">RECIPE STUFF</h3>
-        <p class="recipeIngred">ingredients</p>
-        <p class="recipeInstruct">instructions</p>
-        <button class="button is-dark addRecipeCart">Add to Cart</button>
-
+      <h3 id="modalRecName" class="title mb-6 recName">RECIPE STUFF</h3>
+      <img class="recipeImage" src="" alt="">
+      <h4>Ingredients:</h4>
+      <p class="recipeIngred recIng">ingredients</p>
+      <h4>Instructions:</h4>
+      <p class="recipeInstruct recInst">instructions</p>
+      <button class="button is-dark addRecipeCart">Add to Cart</button>
     </div>
-</div>
+  </div>
 
-    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/meal-plan.js"></script>
 </body>
 
 </html>
