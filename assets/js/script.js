@@ -80,7 +80,8 @@ function displayFeaturedRecipes(randomRecipes) {
                     const recipeIngred = modal.querySelector('.recipeIngred');
                     const recipeInstruct = modal.querySelector('.recipeInstruct');
                     const addRecipeCartBtn = modal.querySelector('.addRecipeCart');
-
+                    addRecipeCartBtn.setAttribute('data-name',recipeName.textContent);
+                    // console.log(recipeName.textContent);
                     // Set the recipe image, name, ingredients, and instructions in the modal
                     recipeImageModal.src = recipe.strMealThumb;
                     recipeImageModal.alt = recipe.strMeal;

@@ -5,17 +5,17 @@ console.log(addRecipeCartButtons);
 var recipeName = document.getElementsByClassName('title');
 console.log(recipeName);
 
-function addToCart() {
+// function addToCart() {
 
-    //if button is clicked, then append to the table
-
-
-    // else - do nothing 
+//     //if button is clicked, then append to the table
 
 
+//     // else - do nothing 
 
 
-}
+
+
+// }
 //chatGPT solution for add to cart:
 
 // Get the shopping cart container element
@@ -23,22 +23,28 @@ var cartContainer = document.getElementById('cart-container');
 
 // Get the "Add to Cart" button element
 var addToCartButton = document.querySelector('.addRecipeCart');
-
+var recipeCartList = JSON.parse(localStorage.getItem('recipeCartList'))|| [];
 // Add a click event listener to the button
 addToCartButton.addEventListener('click', function(event) {
     // Create a new cart item element
-    console.log(event.target)
-    var cartItem = document.createElement('div');
-    cartItem.classList.add('cart-item');
+    console.log(event.target.dataset.name)
 
- // Set the innerHTML of the cart item element using the template
- cartItem.innerHTML = `
- <h4 class="item-name">Product Name</h4>
- <p class="item-price">$10.99</p>
-`;
+recipeCartList.push(event.target.dataset.name)
+localStorage.setItem("recipeCartList",JSON.stringify(recipeCartList));
+
+
+
+    // var cartItem = document.createElement('div');
+    // cartItem.classList.add('cart-item');
+
+//  // Set the innerHTML of the cart item element using the template
+//  cartItem.innerHTML = `
+//  <h4 class="item-name">Product Name</h4>
+//  <p class="item-price">$10.99</p>
+// `;
 
 // Append the cart item element to the shopping cart container
-cartContainer.appendChild(cartItem);
+// cartContainer.appendChild(cartItem);
 });
 
 
