@@ -22,7 +22,6 @@ const addCartBtn = document.querySelectorAll('.addCartBtn');
 const submitCartBtn = document.querySelector('.submitCartBtn');
 
 
-
 // Fetches random recipes
 function getRandomRecipe() {
     const randomRecipes = [];
@@ -100,6 +99,25 @@ function displayFeaturedRecipes(randomRecipes) {
 }
 
 
+// Get all regions from the API
+function getAllRegions() {
+    fetch(searchAllRegions)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            console.log(data.meals[0]);
+            
+            for (let index = 0; index < 3; index++) {
+                
+                const regions = data.meals[index];
+                const regionName = document.getElementById(`regName${index}`);
+                regionName.textContent = regions.strArea;
+            };
+        });
+};
+
+
 
 
 
@@ -126,3 +144,5 @@ function addToCart() {
 
 
 getRandomRecipe();
+getAllRegions();
+
