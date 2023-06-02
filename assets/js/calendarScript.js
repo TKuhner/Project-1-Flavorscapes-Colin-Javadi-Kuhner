@@ -6,15 +6,22 @@ let clicked = null;
 
 let events = localStorage.getItem('events') ? JSON.parse(localStorage.getItem('events')) : [];
 
+const clearCalendarBtn = document.getElementById('clearCalendarBtn');
+
+// clearCalendarBtn.addEventListener('click', () => {
+//     try {
+//         localStorage.clear();
+//     } catch (error) {
+//         console.log(error);
+//     }
+    
+// });
 
 const calendar = document.getElementById('calendar');
 const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
 function load() {
     const currentDate = dayjs();
-    const day = currentDate.format('D');
-    const month = currentDate.format('M');
-    const year = currentDate.format('YYYY');
 
     const newMonth = currentDate.add(nav, 'month');
     
@@ -29,6 +36,7 @@ function load() {
     const paddingDays = weekdays.indexOf(firstOfMonth.format('dddd'));
     const paddingDaysNewMonth = weekdays.indexOf(firstOfNewMonth.format('dddd'));
     
+    // clear calendar
     calendar.innerHTML = '';
     
     if (nav !== 0) {
@@ -105,9 +113,12 @@ function initButtons() {
         // reload calendar
         load();
     });
+    
+
 }
 
 
+// open recipe modal for target day
 function openCalendarModal(date){
     clicked = date;
 
@@ -119,6 +130,7 @@ function openCalendarModal(date){
     }
 }
 
+// make sure calendar is loaded
 initButtons();
 load();
 
