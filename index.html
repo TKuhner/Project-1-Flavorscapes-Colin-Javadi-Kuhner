@@ -262,18 +262,16 @@
       <h4>Instructions:</h4>
       <p class="recipeInstruct recInst">instructions</p>
       <button class="button is-dark addRecipeCart">Add to Cart</button>
-      <!-- class of addRecipeCart -->
+      <!-- class of addRecipeCart adds functionality to js-->
     </div>
   </div>
   
   <br>
+<hr>
 
-
-  <button class="button is-dark">Show Cart 
-
-  </button>
+  <button class="button is-dark">Show Cart  </button>
   <!-- Cart Modal. this will be called dynamically with javaScript -->
-<div class="modal" id="cart-modal">
+<div class="modal">
     <div class="modal-background"></div>
     <div class="modal-content has-background-white py-5 px-5 has-text-centered">
         <h3 id="Cart" class="title mb-6 recName"> Cart </h3>
@@ -289,10 +287,56 @@
     </div>
 </div>
 
+<!-- cart HTML table  -->
+<div class="cart-items cart-container" title="cart">
+    <table class="table" title ="cart" class="cart-table">
+        <thead> 
+            <tr>
+                <th colspan="5"> Shopping Cart Table </th>
+            </tr>
+            <tr>
+                <th>Item Index </th>
+                <th> Meal Name  </th>
+                <th> Quantity </th>
+                <th> Thumbnail</th>
+                <th> Remove?</th>
+              </tr>
+        </thead>
+        <tbody class="cart-row">
+            <tr>
+                <td>a1</td>
+                <td class="meal-name"> </td>
+                <td class="cart-quantity-input"> <input class="input" type="number" placeholder="1"> </td>
+                <td> <img src="" alt="thumbnail"> </td>
+                <td> <button class="button is-danger removeItem"> Remove Item </button></td>
+            </tr>
+            <tr>
+                <td> a2</td>
+                <td class="meal-name"> </td>
+                <td class="cart-quantity-input"> <input  class="input" type="number" placeholder="0"> </td>
+                <td> <img src="" alt="thumbnail"></td>
+                <td> <button class="button is-danger removeItem"> Remove Item </button></td>
 
+            </tr>
+            <tr>
+                <td>a3</td>
+                <td class="meal-name"> </td>
+                <td class="cart-quantity-input"><input class="input"  type="number" placeholder="1">  </td>
+                <td> <img src="" alt="thumbnail"> </td>
+                <td> <button class="button is-danger removeItem"> Remove Item </button></td>
+            </tr>
+    
+        
+        </tbody>
+    </table>
+    
+    <button class="button is-danger"> Clear Cart </button>
 
 
 </div>
+
+
+
 
 
     <script src="./assets/js/script.js"></script>

@@ -270,11 +270,13 @@ addCartBtn.forEach(function (button) {
     button.addEventListener('click', addToCart);
 })
 
-function addToCart() {
-    // get the recipe name
-    // store the recipe name in local storage for cart
-}
 
 
 getRandomRecipe();
 
+
+
+function addToCart() {
+    // get the recipe name
+    // store the recipe name in local storage for cart
+}
