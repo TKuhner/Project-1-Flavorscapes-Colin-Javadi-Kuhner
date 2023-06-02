@@ -211,6 +211,52 @@ function createDropdownMenu(options, dropdownMenu) {
     }
 }
 
+
 function createRecipeCard(recipe) {
-   
+    const recipeCard = document.createElement('div');
+    recipeCard.classList.add('card');
+    recipeCard.innerHTML = `
+      <div class="card-image">
+        <figure class="image is-4by3">
+          <img src="${recipe.strMealThumb}" alt="${recipe.strMeal}">
+        </figure>
+      </div>
+      <div class="card-content">
+        <div class="media">
+          <div class="media-content has-text-centered">
+            <p class="title is-4">${recipe.strMeal}</p>
+          </div>
+        </div>
+        <div class="content has-text-centered">
+          <button class="button is-dark viewRecipe">View Recipe</button>
+        </div>
+      </div>
+    `;
+
+    // Attach event listener to the viewRecipe button
+    const viewRecipeBtn = recipeCard.querySelector('.viewRecipe');
+    viewRecipeBtn.addEventListener('click', function () {
+        // Populate recipe information in the modal
+        const modal = document.querySelector('.modal');
+        const recipeImageModal = modal.querySelector('.recipeImage');
+        const recipeNameModal = modal.querySelector('#modalRecName');
+        const recipeIngred = modal.querySelector('.recipeIngred');
+        const recipeInstruct = modal.querySelector('.recipeInstruct');
+
+        recipeImageModal.src = recipe.strMealThumb;
+        recipeNameModal.textContent = recipe.strMeal;
+        recipeIngred.textContent = recipe.strIngredient1 + ", " + recipe.strIngredient2 + ", " + recipe.strIngredient3;
+        recipeInstruct.textContent = recipe.strInstructions;
+
+        // Show the modal
+        modal.classList.add('is-active');
+    });
+
+    return recipeCard;
 }
+
+
+// Event listener to close the modal when clicking outside of it
+modalBG.addEventListener('click', function () {
+    modal.classList.remove('is-active');
+});

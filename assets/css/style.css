@@ -1,6 +1,6 @@
 #container {
     width: 100%;
-    height: 100000000000000px;
+    height: 1500px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -19,7 +19,7 @@
     height: auto;
     margin: 1%;
     display: flex;
-    flex-wrap: wrap; /* Allow multiple recipe cards to wrap within the container */
+    flex-direction: column; /* Allow multiple recipe cards to wrap within the container */
     justify-content: flex-start; /* Adjust alignment as needed */
     align-items: flex-start; /* Adjust alignment as needed */
   }
