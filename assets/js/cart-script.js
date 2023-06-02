@@ -12,6 +12,16 @@ function populateCart() {
         cartList.appendChild(recipeItem);
     }
   }
+
+const clearCartBtn = document.getElementById('clearCartBtn');
+
+clearCartBtn.addEventListener('click', () => {
+    try {
+        localStorage.clear();
+    } catch (error) {
+        console.log(error);
+    }
+});
   
   populateCart();
   
