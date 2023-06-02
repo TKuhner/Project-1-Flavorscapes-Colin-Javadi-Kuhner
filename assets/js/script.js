@@ -18,9 +18,11 @@ const viewRecipeBtn = document.querySelectorAll('.viewRecipe');
 const modal = document.querySelector('.modal');
 const modalBG = document.querySelector('.modal-background');
 const closeBtn = document.querySelector('.closeBtn');
-const addCartBtn = document.querySelectorAll('.addCartBtn');
+const addCartBtn = document.querySelectorAll('.addRecipeCart');
 const submitCartBtn = document.querySelector('.submitCartBtn');
+// var recipeCartList = JSON.parse(localStorage.getItem('recipeCartList'))|| [];
 
+const recCartBtn = document.querySelectorAll('#recCartBtn');
 
 // Fetches random recipes
 function getRandomRecipe() {
@@ -107,9 +109,9 @@ function getAllRegions() {
         })
         .then(function (data) {
             console.log(data.meals[0]);
-            
+
             for (let index = 0; index < 3; index++) {
-                
+
                 const regions = data.meals[index];
                 const regionName = document.getElementById(`regName${index}`);
                 regionName.textContent = regions.strArea;
@@ -133,14 +135,36 @@ function openModal() {
 
 modalBG.addEventListener('click', () => modal.classList.remove('is-active'));
 
+
+
+var recipeCartList = [];
+
 addCartBtn.forEach(function (button) {
     button.addEventListener('click', addToCart);
+    console.log('button clicked');
 })
-
 function addToCart() {
+    console.log('made it to addToCart function');
     // get the recipe name
+    var recipeName = document.getElementById('modalRecName').textContent;
+
+    recipeCartList.push(recipeName);
     // store the recipe name in local storage for cart
+    localStorage.setItem('recipeCart', JSON.stringify(recipeCartList));
+
+
 }
+
+
+
+// recCartBtn.forEach(function (button) {
+//     button.addEventListener('click', openCart);
+// })
+
+// function openCart() {
+
+// }
+
 
 
 getRandomRecipe();
