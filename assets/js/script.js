@@ -51,6 +51,7 @@ function getRandomRecipe() {
 // Displays featured recipes
 function displayFeaturedRecipes(randomRecipes) {
     randomRecipes.forEach((recipeId, index) => {
+
         const recipeURL = searchById + recipeId;
 
         fetch(recipeURL, {
@@ -97,6 +98,10 @@ function displayFeaturedRecipes(randomRecipes) {
             });
     });
 }
+
+
+
+
 
 
 
