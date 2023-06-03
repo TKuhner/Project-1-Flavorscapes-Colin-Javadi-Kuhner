@@ -1,7 +1,7 @@
 function populateCart() {
     // Get the cart object from local storage
     var recipeCartList = JSON.parse(localStorage.getItem('recipeCart'));
-    console.log(recipeCartList);
+    console.log(recipeCartList); // keeping for demo 
 
     // write recipecartlist to cart.html
     var cartList = document.getElementById('cartList');
