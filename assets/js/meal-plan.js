@@ -89,7 +89,7 @@ function getCustomerCategory(userCat) {
 // this will pass the user selected region to the function, concat the string and pass it to the API
 function getCustomerRegion(userReg) {
     let filteredRegion = filterRegion + userReg;
-    console.log(filteredRegion);
+    // console.log(filteredRegion);
     fetch(filteredRegion, {
         method: 'GET',
     })
@@ -106,7 +106,7 @@ function getCustomerRegion(userReg) {
 // this will pass the user selected ingredient to the function, concat the string and pass it to the API
 function getCustomerIngredient(userIng) {
     let filteredIngredient = filterIngredient + userIng;
-    console.log(filteredIngredient);
+    // console.log(filteredIngredient);
     fetch(filteredIngredient, {
         method: 'GET',
     })
