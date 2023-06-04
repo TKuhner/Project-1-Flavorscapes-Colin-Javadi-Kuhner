@@ -1,6 +1,7 @@
 # Project-1-Flavorscapes-Colin-Javadi-Kuhner
 Northwestern University coding bootcamp project 1. Work was provided by Adam Colin, AJ Javadi, and Trevor Kuhner.
 
+![image](https://github.com/TKuhner/Project-1-Flavorscapes-Colin-Javadi-Kuhner/assets/71107536/57cf68ec-ffb9-4c12-95ec-a0df1907304e)
 
 
 # Meal Planner Web Application

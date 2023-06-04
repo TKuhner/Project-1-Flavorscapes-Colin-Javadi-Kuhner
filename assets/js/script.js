@@ -39,12 +39,12 @@ function getRandomRecipe() {
                 // Store the ID of each random recipe
                 randomRecipes.push(data.meals[0].idMeal);
                 if (randomRecipes.length === 3) {
-                    console.log('Random Recipes:', randomRecipes);
+                    // console.log('Random Recipes:', randomRecipes);
                     displayFeaturedRecipes(randomRecipes);
                 }
             })
             .catch(function (error) {
-                console.log('Error:', error);
+                // console.log('Error:', error);
             });
     }
 }
@@ -108,7 +108,7 @@ function getAllRegions() {
             return response.json();
         })
         .then(function (data) {
-            console.log(data.meals[0]);
+            // console.log(data.meals[0]);
 
             for (let index = 0; index < 3; index++) {
 
@@ -141,10 +141,10 @@ var recipeCartList = [];
 
 addCartBtn.forEach(function (button) {
     button.addEventListener('click', addToCart);
-    console.log('button clicked');
+    // console.log('button clicked');
 })
 function addToCart() {
-    console.log('made it to addToCart function');
+    // console.log('made it to addToCart function');
     // get the recipe name
     var recipeName = document.getElementById('modalRecName').textContent;
 
